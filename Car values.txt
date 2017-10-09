@@ -1,0 +1,45 @@
+.headers on
+
+
+-- Name text01.sql 
+-- Author: Christopher Casale
+-- Date: Auguest 14, 2017
+-- Purpose: tp demnstrate a demonstraition
+-- SQL CODE 
+select 4+5;
+4+5
+9
+
+--create a database like the 
+--"Cars" 
+
+-- drop table if exisit Cars;
+drop table if exists cars;
+
+create table Cars (
+	id int,
+	name text,
+	value int
+);
+
+insert into cars values(1, "R34-SKYLINE", 100000);
+insert into cars values(2, "AVENTADOR", 300000);
+insert into cars values(3, "650-LT", 200000);
+insert into cars values(4, "911-GT", 89000);
+insert into cars values(5, "ASTON-MARTIN-DB9", 198000);
+insert into cars values(6, "NOBLE-M600", 200000);
+
+Select * from Cars where value < 190000;
+id|name|value
+1|R34-SKYLINE|100000
+4|911-GT|89000
+Select * from Cars where value > 100000;
+id|name|value
+2|AVENTADOR|300000
+3|650-LT|200000
+5|ASTON-MARTIN-DB9|198000
+6|NOBLE-M600|200000
+Select * from Cars where value = 100000;
+id|name|value
+1|R34-SKYLINE|100000
+drop table if exists Cars;
